@@ -6,7 +6,8 @@ RM=rm -f
 #LDLIBS=$(shell  --libs)
 CPPFLAGS=-fPIC -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux
 LDFLAGS=-ljvm
-LDLIBS=-L/usr/bin/java
+
+LDLIBS= -L/usr/bin/java -L/usr/lib/jvm/java-11-openjdk-amd64/bin/java
 
 SRCS=native.cpp
 OBJS=$(subst .ccp,.o,$(SRCS))
