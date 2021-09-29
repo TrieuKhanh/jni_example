@@ -25,7 +25,7 @@ int main()
        JavaVMOption* options = new JavaVMOption[1];   // JVM invocation options
        options[0].optionString = (char*)(std::string("-Djava.class.path=.").c_str());   // where to find java .class
        vm_args.version = JNI_VERSION_1_6;             // minimum Java version
-       vm_args.nOptions = 1;                          // number of options
+       vm_args.nOptions = 0;                          // number of options
        vm_args.options = options;
        vm_args.ignoreUnrecognized = false;     // invalid options make the JVM init fail
            //=============== load and initialize Java VM and JNI interface =============
